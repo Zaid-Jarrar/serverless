@@ -10,7 +10,8 @@ class handler(BaseHTTPRequestHandler):
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
     sqr = math.sqrt(int(self.path[1:]))
-    self.wfile.write(str(sqr).encode())
+    self.wfile.write(sqr.encode())
+    self.wfile.write(str(datetime.now('GMT+3').strftime('%Y-%m-%d %H:%M:%S')).encode())
 
     return
     
