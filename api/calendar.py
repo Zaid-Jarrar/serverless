@@ -20,7 +20,7 @@ class handler(BaseHTTPRequestHandler):
     self.wfile.write(str(datetime.now().strftime('%Y-%m-%d/%W/ %H:%M:%S \n')).encode())
     self.wfile.write(message2.encode())
     self.wfile.write(calendar.calendar(2022, 2, 1, 6).encode())
-    url.path
-    self.wfile.write(url.encode())
+    url.params
+    self.wfile.write(url.query.encode())
     return
 
