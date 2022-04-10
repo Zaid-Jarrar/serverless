@@ -12,6 +12,8 @@ class handler(BaseHTTPRequestHandler):
     # with open(self.path, 'rb') as f:
     #   self.wfile.write(f.read())
     url= urlparse('https://serverless-eight-tawny.vercel.app/api/serverless')
+    message = 'This is the datetime Year/Month/Day/Number of Week/Hour/Minute/Second: ' +'\n'
+    self.wfile.write(message.encode())
     self.wfile.write(str(datetime.now().strftime('%Y-%m-%d-%W %H:%M:%S')).encode())
     url.path
     return
