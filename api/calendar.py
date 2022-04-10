@@ -15,7 +15,8 @@ class handler(BaseHTTPRequestHandler):
     #   self.wfile.write(f.read())
     url= 'https://serverless-eight-tawny.vercel.app/api/calendar'
     result = urllib.parse.urlparse(url)
-    self.wfile.write(result.encode('utf-8'))
+    result.query
+    result.path
     # self.wfile.write('Scheme : ' + result.scheme)
     # self.wfile.write('HostName : ' + result.hostname)
     # self.wfile.write('Query : ' + result.query)
