@@ -7,7 +7,8 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    multi = '20 ** 2 = 400'
-    self.wfile.write(bytes(str(multi), "utf-8"))
+    self.path = 'large_m12Yz5uRK2DL5UCAZMbeB3ArNNg.jpg'
+    with open(self.path, 'rb') as f:
+      self.wfile.write(f.read())
     self.wfile.write(str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')).encode())
     return
