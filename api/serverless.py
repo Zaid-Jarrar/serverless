@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from datetime import datetime
+from urllib.parse import urlparse
 
 class handler(BaseHTTPRequestHandler):
 
@@ -10,5 +11,5 @@ class handler(BaseHTTPRequestHandler):
     self.path = 'large_m12Yz5uRK2DL5UCAZMbeB3ArNNg.jpg'
     with open(self.path, 'rb') as f:
       self.wfile.write(f.read())
-    self.wfile.write(str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')).encode())
+    url= urlparse('https://serverless-eight-tawny.vercel.app/api/serverless')
     return
