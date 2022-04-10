@@ -21,5 +21,6 @@ class handler(BaseHTTPRequestHandler):
     self.wfile.write(message2.encode())
     self.wfile.write(calendar.calendar(2022, 2, 1, 6).encode())
     url.path
+    self.wfile.write(url.encode())
     return
 
