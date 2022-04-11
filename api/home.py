@@ -8,7 +8,7 @@ class handler(BaseHTTPRequestHandler):
 
   def do_GET(self):    
     
-    path= 'https://serverless-eight-tawny.vercel.app/api/home'
+    path= 'https://serverless-eight-tawny.vercel.app?/api/home'
     url_components = parse.urlparse(path)
     query_string = parse.parse_qsl(url_components.query)
     dic=dict(query_string)
