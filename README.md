@@ -1,5 +1,3 @@
-
-
 ## To see the calendar of year 2022:
 - First click on this [url](https://serverless-eight-tawny.vercel.app)
 - Then type **/api/calendar** at the end of the url path
@@ -23,8 +21,8 @@
 
 ## Testing using Thunder Client or Postman
 - Use this **URL** (https://serverless-eight-tawny.vercel.app/api/calendar)
-- Make sure its a **Get** method 
+- Make sure its a **Get** request 
 - Select the **Query** section
 - type in **name** in the parameter field and **your name** in the value field
-- Press send and you will see like the following:
+- Press send and you will see like the following result:
 ![Testing query](assets/Testing.PNG)
